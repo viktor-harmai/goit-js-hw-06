@@ -2,18 +2,18 @@ let counterValue = 0;
 
 const actions = document.querySelectorAll('#counter button');
 
-const rander = () => {
-  actions[0].nextElementSibling.textContent = counterValue;
-};
+//console.log(actions[0].nextElementSibling);
 
-const onClickDecrement = () => {
+const rander = () => (actions[0].nextElementSibling.textContent = counterValue);
+
+const onClickDecrement = event => {
   counterValue -= 1;
-  rander();
+  return rander();
 };
 
-const onClickIncrement = () => {
+const onClickIncrement = event => {
   counterValue += 1;
-  rander();
+  return rander();
 };
 
 actions[0].addEventListener('click', onClickDecrement);

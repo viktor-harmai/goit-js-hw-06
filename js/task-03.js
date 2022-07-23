@@ -32,4 +32,4 @@ const makeGalleryMarkup = image => {
 const makeImegeEL = images.map(makeGalleryMarkup).join('');
 
 imgContainerEL.insertAdjacentHTML('beforeend', makeImegeEL);
-console.log(makeImegeEL);
+//console.log(makeImegeEL);
