@@ -28,6 +28,5 @@ function onFormSubmit(event) {
   //   });
 
   //======================reset============================
-
-  refs.formEl.reset();
+  event.currentTarget.reset();
 }
