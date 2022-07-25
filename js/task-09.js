@@ -7,16 +7,17 @@ const refs = {
 refs.buttonEl.addEventListener('click', onButtonClick);
 
 function onButtonClick(event) {
-  inputBodyBackgroundColor();
-  inputColorValue();
+  const hexColor = getRandomHexColor();
+  inputBodyBackgroundColor(hexColor);
+  inputColorValue(hexColor);
 }
 
-function inputBodyBackgroundColor() {
-  refs.bodyEl.style.backgroundColor = getRandomHexColor();
+function inputBodyBackgroundColor(color) {
+  refs.bodyEl.style.backgroundColor = color;
 }
 
-function inputColorValue() {
-  refs.colorValue.textContent = getRandomHexColor();
+function inputColorValue(color) {
+  refs.colorValue.textContent = color;
 }
 
 function getRandomHexColor() {

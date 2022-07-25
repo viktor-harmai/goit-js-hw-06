@@ -6,9 +6,9 @@ refs.inputEl.addEventListener('blur', onBlur);
 
 function onBlur(event) {
   const onValue = event.currentTarget.value.length;
-  const validValue = refs.inputEl.dataset.length;
+  const validValue = Number(refs.inputEl.dataset.length);
 
-  if (onValue == validValue) {
+  if (onValue === validValue) {
     refs.inputEl.classList.add('valid');
     refs.inputEl.classList.remove('invalid');
   } else {
@@ -16,9 +16,9 @@ function onBlur(event) {
     refs.inputEl.classList.remove('valid');
   }
 
-  //   onValue == validValue ? console.log('ok') : console.log('no');
-  //   console.log(onValue);
-  //   console.log(validValue);
+  // onValue === validValue ? console.log('ok') : console.log('no');
+  // console.log(onValue);
+  // console.log(validValue);
 }
 
 // console.log('Value data - length:', refs.inputEl.dataset.length);
